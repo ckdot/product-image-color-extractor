@@ -1,13 +1,15 @@
 # kilb/product-image-color-extractor
 
-[![Source Code][badge-source]][source]
-[![Latest Version][badge-release]][release]
-[![Software License][badge-license]][license]
-[![Build Status][badge-build]][build]
-[![Coverage Status][badge-coverage]][coverage]
-[![Total Downloads][badge-downloads]][downloads]
 
 kilb/product-image-color-extractor is a PHP library for extracting colors from product images like they are common in E-Commerce.
+
+## Installation
+
+ImageMagick and PHP Imagick Module are required.
+
+```php
+composer require ckdot/product-image-color-extractor
+```
 
 ## About
 

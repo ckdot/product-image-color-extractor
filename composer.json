@@ -10,5 +10,8 @@
             "email": "contact@cilb.de"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {"Ckdot\\ProductImageColorExtractor\\": "src/"}
+    }
 }
