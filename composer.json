@@ -1,4 +1,5 @@
 {
+    "version": "1.0.0",
     "name": "ckdot/product-image-color-extractor",
     "description": "ckdot/product-image-color-extractor is a PHP library for extracting colors from product images like they are common in E-Commerce.",
     "type": "library",
