@@ -13,14 +13,15 @@ class Extraction
 
     /**
      * @param string $path
+     * @param int $quality higher quality will return more colors and takes more time
      * @return ColorResult[]
      */
-    public function getColors($path)
+    public function getColors($path, $quality = 10)
     {
         $image = $this->readImage($path);
         $this->cropImage($image);
         $this->resizeImage($image);
-        $this->reduceColors($image);
+        $this->reduceColors($image, $quality);
         $this->removeBackground($image);
         
         return $this->getImageColors($image);
@@ -174,10 +175,12 @@ class Extraction
 
     /**
      * @param Imagick $image
+     * @param int $quality
+     * 
      */
-    private function reduceColors(Imagick $image)
+    private function reduceColors(Imagick $image, $quality)
     {
-        $image->quantizeImage(8, 256, 3, Imagick::DITHERMETHOD_FLOYDSTEINBERG, false);
+        $image->quantizeImage($quality, 256, 3, Imagick::DITHERMETHOD_FLOYDSTEINBERG, false);
     }
 
     /**
